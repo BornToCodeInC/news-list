@@ -1,0 +1,32 @@
+.itemContainer {
+  display: flex;
+  margin-bottom: 25px;
+  padding: 0 20px 5px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-left: 20px;
+  width: calc(100% - 325px);
+}
+
+.label {
+  text-transform: uppercase;
+  display: block;
+  font-family: 'Interstate-Bold',sans-serif;
+  font-size: 20px;
+  color: #ff8800;
+}
+.picture {
+  margin-left: -41px;
+}
+.title {
+  font-size: 19px;
+  font-family: 'AktivGrotesk-XBold',sans-serif;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+  margin-bottom: 5px;
+  line-height: 1;
+}

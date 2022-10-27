@@ -1,9 +1,22 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, RenderResult } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+const makeSut = () => {
+  return render(<App />);
+};
+let screen: RenderResult;
+
+beforeEach(() => {
+    screen = makeSut();
+});
+
+describe('<App />', () => {
+  test('Should render ul', () => {
+    expect(screen.container.querySelector('ul')).toBeInTheDocument();
+  });
+
+  test('Should render data', () => {
+    expect(screen.container.querySelectorAll('li').length).toBe(21);
+  });
 });
