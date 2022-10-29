@@ -28,5 +28,4 @@ yarn-error.log*
 /playwright-report/
 /playwright/.cache/
 .idea/
-/playwright-report
 /tests-examples

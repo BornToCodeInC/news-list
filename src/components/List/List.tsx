@@ -19,7 +19,7 @@ export type ListProps = {
     listItems: Item[];
 };
 
-export const List: React.FC<ListProps> = ({ listItems }): JSX.Element | null => {
+export const List: React.FC<ListProps> = ({listItems}): JSX.Element | null => {
     return listItems.length ?
         <ul className={styles.list}>
             {listItems.map(item => <ListItem

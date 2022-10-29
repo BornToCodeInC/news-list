@@ -9,9 +9,14 @@ export type ListItemProps = {
     title: string;
 };
 
-export const ListItem: React.FC<ListItemProps> = ({ articleUrl, imageUrl, label, title }): JSX.Element => {
+export const ListItem: React.FC<ListItemProps> = ({
+                                                      articleUrl,
+                                                      imageUrl,
+                                                      label,
+                                                      title
+                                                  }): JSX.Element => {
     return (
-        <li className="e2e-li">
+        <li data-id="listItem">
             <a
                 className={styles.itemContainer}
                 href={articleUrl}
@@ -20,10 +25,19 @@ export const ListItem: React.FC<ListItemProps> = ({ articleUrl, imageUrl, label,
                     className={styles.picture}
                     src={imageUrl}
                     alt={title}
+                    data-id="listItemImage"
                 />
                 <div className={styles.textContainer}>
-                    <div className={styles.label}>{label}</div>
-                    <h2 className={styles.title}>{title}</h2>
+                    {label && <div
+                        className={styles.label}
+                        data-id="listItemLabel">
+                        {label}
+                    </div>}
+                    {title && <h2
+                        className={styles.title}
+                        data-id="listItemTitle">
+                        {title}
+                    </h2>}
                 </div>
             </a>
         </li>
