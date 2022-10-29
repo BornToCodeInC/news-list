@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { HERO_CONTENT, HOST } from './constants';
+import { HERO_CONTENT, HOST } from './utills/constants';
 
 test.describe.parallel('Hero component is rendered correctly', () => {
     test.beforeEach(async ({page}) => {

@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { HOST, LIST_CONTENT } from './constants';
+import { HOST, LIST_CONTENT } from './utills/constants';
 
 test.describe.parallel('List component is rendered correctly', () => {
     test.beforeEach(async ({page}) => {
